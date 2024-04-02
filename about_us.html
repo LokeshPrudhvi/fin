@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Finloitte</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicons -->
+    <link href="" rel="icon">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/susthira-all.css">
+    <link href="css/all-css-files.css" rel="stylesheet" type="text/css">
+    <link href="css/style-main.css" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="sweetalert2.css">
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            // Set a minimum display time for the preloader (in milliseconds)
+            var minDisplayTime = 2000; // 2 seconds
+            // Show the preloader
+            var preloader = document.getElementById('preloader');
+            preloader.innerHTML = '<div class="spinner"></div>';
+            // Enable features or content after the minimum display time
+            setTimeout(function() {
+                // Hide the preloader
+                preloader.style.display = 'none';
+                // Add your code to enable certain features or content here
+                // For demonstration purposes, let's just mark the document as loaded
+                document.body.classList.add('loaded');
+            }, minDisplayTime);
+        });
+    </script>
+    <!-- <div class="preloader">
+        <img src="images/finloitte logo final-01-01.jpg" alt="Loading..." class="preloader-logo">
+    </div> -->
+    <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+        <div class="container">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+            <a class="navbar-brand text-brand" href="index.html" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <img src="images/finloitte logo final-01-01.jpg">
+            </a>
+            <div class="navbar-collapse collapse justify-content-center" id="navbarDefault" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                        <div class="dropdown">
+                            <ul>
+                                    <li class="dropdown-link-second">
+                                        <a class="dropdown-link-second" href="services.html">Financial Analysis and Planning Services</a>
+                                        <div class="dropdown">
+                                            <ul>
+                                                <li class="dropdown-link"><a href="services.html">Accounting & Bookkeeping</a></li>
+                                                <li class="dropdown-link"><a href="services.html">Assessment Of Financial Health Services</a></li>
+                                                <li class="dropdown-link"><a href="services.html">Company Operations Feasibility Studies</a></li>
+                                                <li class="dropdown-link"><a href="services.html">Business Feasibility Studies Services</a></li>
+                                                <li class="dropdown-link"><a href="services.html">Real Estate Feasibility Studies Services</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                <li class="dropdown-link-second"><a href="services.html">Tax and Compliance Services</a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li class="dropdown-link"><a href="services.html">Corporate Tax Registration & filing </a></li>
+                                            <li class="dropdown-link"><a href="services.html">VAT Registration & VAT filing </a></li>
+                                            <li class="dropdown-link"><a href="services.html">VAT Assessment & Advisory </a></li>
+                                            <li class="dropdown-link"><a href="services.html">Transfer Pricing </a></li>
+                                            <li class="dropdown-link"><a href="services.html">RERA Budgets for Owner Associations</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Company Formation Services</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Bank Account Opening Services</a></li>
+                                        </ul>
+                                    </div></li>
+                                <li class="dropdown-link-second"><a href="services.html">Risk Management and Advisory Services</a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li class="dropdown-link"><a href="services.html">Audit & Assurance Support Services</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Risk Management Advisory</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Fund Raising Advisory Services</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Startup Consultancy Services</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Virtual CFO Services</a></li>
+                                        </ul>
+                                    </div></li>
+                                <li class="dropdown-link-second"><a href="services.html">Technology Services</a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li class="dropdown-link"><a href="services.html">Business Process Outsourcing</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Financial Year and Period Closing</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Cyber Security Services and Solutions </a></li>
+                                            <li class="dropdown-link"><a href="services.html">Oracle EBS Turnkey Services </a></li>
+                                            <li class="dropdown-link"><a href="services.html">Business Intelligence Reporting</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Power BI Implementation and Dashboards</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Robotic Process Automation</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Oracle Cloud Migration</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Outsourced Support Services</a></li>
+                                        </ul>
+                                    </div></li>
+                                <li class="dropdown-link-second"><a href="services.html">Other Services</a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li class="dropdown-link"><a href="services.html">Cloud Computing Solutions</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Web and Mobile Applications Development  </a></li>
+                                            <li class="dropdown-link"><a href="services.html">Digital Marketing campaigns and services  </a></li>
+                                            <li class="dropdown-link"><a href="services.html">Domains and Hosting Services</a></li>
+                                            <li class="dropdown-link"><a href="services.html">AIML and ChatGPT Services </a></li>
+                                        </ul>
+                                    </div></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="dropdown-link"><a href="products.html">Financial Management Reporting</a></li>
+                                <li class="dropdown-link"><a href="products.html">Financial Dashboards</a></li>
+                                <li class="dropdown-link"><a href="products.html">Data Transactional Reporting</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultation.html">Consultation</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="dropdown-link"><a href="consultation.html">Financial Risk Management Assessment</a></li>
+                                <li class="dropdown-link"><a href="consultation.html">Technology Risk Management Assessment</a></li>
+                                <li class="dropdown-link"><a href="consultation.html">IT Auditing and Compliance Management</a></li>
+                                <li class="dropdown-link"><a href="consultation.html">Finance Auditing and Compliance Managementw</a></li>
+                                <li class="dropdown-link"><a href="consultation.html">Project Management</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about_us.html">About&nbsp;us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact&nbsp;us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/ Nav End /-->
+    <div style="height: 150px; background-color: #333; color: #ffffff;"><H1> about_us</H1><h1 style="color: #ffffff; padding-left: 20%; padding-top: 20px;">About us</h1></div>
+    <section class="about_section layout_padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 px-0">
+              <div class="img_container">
+                <div class="img-box">
+                  <img src="images/p-banner-9.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 px-0">
+              <div class="detail-box">
+                <div class="heading_container ">
+                  <h2>
+                    Who Are We?
+                  </h2>
+                </div>
+                <p>
+                    At FINLOITTE, we are a team of experienced consultants dedicated to helping our clients achieve their financial goals and objectives. Our firm was founded on the belief that everyone should have access to high-quality financial advice and services, regardless of their wealth or financial background.
+                    Finloitte Technology team having 20 plus years of experience in diversified business to provide technology and business solutions.
+                </p>
+                <div class="btn-box" >
+                  <a href="#ourapproch">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!--/ approch us Start /-->
+<section id="ourapproch" style="background-color: rgb(240, 240, 240);" class="section-about py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <div class="justify-content-between" style="text-align: center;">
+                    <div class="">
+                        <h1 class="title-a">Our Approach</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <div class="row">
+                    <!-- <div class="col-md-6 col-lg-5">
+          <img src="images/leaves-2b.jpg" alt="" class="img-fluid">
+        </div> -->
+                    <div class="col-md-12 col-lg-12 section-md-t3" style="padding-left:5%">
+                        <div >
+                            <p class="">We as Finloitte Core team having 20+ years of experience in the Finance an d Technology arena, our adopted approach will always do the RTA and assessment to offer applied and implemented solutions which will make sure to
+                                best fit and simply the financial and technology pain-points to achieve financial and technology goals and vision.<br>
+                                <div style="color: #06914e;">Our approach to financial and technology consulting is based on three core principles:</div>
+                                <span style="color: #06914e;">Personalization:</span> We believe that each client deserves a customized financial solution that takes into account their individual goals, preferences, and circumstances. We take the
+                                time to get to know our clients and develop a deep understanding of their needs and objectives.<br>
+                                <span style="color: #06914e;">Expertise:</span> Our team of financial consultants is made up of experts in a variety of fields, with years of experience and a deep knowledge of the financial industry. We stay up-to-date
+                                on the latest trends and developments, so we can provide our clients with the best advice and guidance possible.<br>
+                                <span style="color: #06914e;">Integrity:</span> At FINLOITTE, we believe in doing business with integrity and transparency. We are committed to providing our clients with honest, unbiased advice, and we always act in
+                                their best interests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--our approch us end-->
+<!--/ about us Start /-->
+<section style="text-align: center;" class="section-about background-image py-5">
+    <div class="container" style="background-image: url(\images\ai-min.jpg);">
+        <div class="row" >
+            <div  class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <div class="justify-content-between" >
+                    <div class="">
+                        <h1 style="color: #06914e;" class="title-a">Why Us</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-left" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <div class="row">
+                    <!-- <div class="col-md-6 col-lg-5">
+          <img src="images/leaves-2b.jpg" alt="" class="img-fluid">
+        </div> -->
+                    <div id="whyus" class="col-md-12 col-lg-12 section-md-t3" style="padding-left:5%">
+                        <div >
+                            <p class="abouttxt">At <strong>FINLOITTE</strong> , we understand that you have many options when it comes to financial and technology consulting services. That's why we want to explain why we believe we are the best choice for your business needs.
+                                <br>
+                                <strong>1. Experience</strong> Our team of financial consultants has years of experience in a variety of financial fields, including investment management, financial planning, business consulting, and corporate finance. We have worked with individuals, small businesses, and large corporations, and we have a deep understanding of the financial industry.
+                                <br>
+                                <strong>2.	Expertise</strong> : Our team members have a range of certifications and qualifications, including Chartered Financial Analyst (CFA) and Certified Financial Planner (CFP). We are committed to staying up to date on the latest trends and developments in the financial industry, so we can provide our clients with the best advice and guidance possible.
+                                <br>
+                                <strong>3.	Excellence</strong> : We always strive to deliver services, products, and solutions to accomplish financial, technological, and operational excellence.
+                                <br>
+                                <strong>4.	Personalization</strong>: We believe that each client is unique, and we take the time to get to know our clients and develop a customized financial solution that meets their individual needs and circumstances.
+                                <br>
+                                <strong>5.	Integrity</strong>: At FINLOITTE, we believe in doing business with integrity and transparency. We are committed to providing our clients with honest, unbiased advice, and we always act in their best interests.
+                                <br>
+                                <strong>6. Client-focused</strong>	: We put our clients first in everything we do. We are dedicated to building long-lasting relationships with our clients, and we work hard to provide exceptional customer service and support.
+                                <br>
+                                <strong>7.	Comprehensive services</strong>: We offer a range of financial consulting services, including investment management, financial planning, business consulting, and corporate finance. This allows us to provide our clients with comprehensive solutions that meet all their financial needs.
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About End -->
+<!--/ footer Star /-->
+<section class="contact py-5" style="background-image: url(images/footer-background.jpg); color: rgb(207, 207, 207);" >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class=" col-sm-6 col-md-6 col-lg-3 section-md-t3" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                        <h2 style=" font-size: 3rem; text-align: left;">
+                            <span style="color: #ffffff;">Finl</span><span style="color: #57cd69;">oitt</span><span style="color: #ffffff;">e</span></h2>
+                        <P class="text-left">Finloitte Technology team having 20 plus years of experience in diversified business to provide technology and business solutions. Our technology team of SMEs are and pool of technical resources work 24/7 to support round the
+                            clock worldwide. </P>
+                    </div>
+                    <div class=" col-sm-6 col-md-6 col-lg-3 section-md-t3" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                        <h4 style="color: #57cd69; text-align: left;">Services</h4>
+                        <ul>
+                            <li>Financials advisor</li>
+                            <li>Virtual CFO </li>
+                            <li>Accounting & Bookkeeping</li>
+                            <li>Audit & Assurance Support </li>
+                            <li>Business Feasibility Studies & Business Valuation </li>
+                            <li>Business Process Optimization</li>
+                            <li>Technology Advisory </li>
+                            <!-- <li style="color: black;">6.Assessment Of Financial Health </li>
+<li style="color: black;">7.	Financial Year and Period Closing</li>
+<li style="color: black;">8.	ERP Implementation </li>
+<li style="color: black;">9.	Cyber Security </li>
+<li style="color: black;">10.Business Intelligence Reporting</li> -->
+                        </ul>
+                    </div>
+                    <div class=" col-sm-6 col-md-6 col-lg-3 section-md-t3" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                        <h4 style="color: #57cd69; text-align: left;">consultation</h4>
+                        <ul>
+                            <li>Financial Health Evaluation</li>
+                            <li>Risk Management Assessment </li>
+                            <li>Cash Flow Analysis</li>
+                            <li>Debt Management Review</li>
+                            <li>Investment Portfolio Review </li>
+                            <!-- <li style="color: black;">6.	Retirement Readiness Assessment</li>
+<li style="color: black;">7.	Financial Management Services </li>
+<li style="color: black;">8.	Proof of Concept of Business Models</li>
+<li style="color: black;">9.	Financial Year and Period Closing</li>
+<li style="color: black;">10. ERP Implementation </li>
+<li style="color: black;">11. Cyber Security </li>
+<li style="color: black;">12.Business Intelligence Reporting</li> -->
+                        </ul>
+                    </div>
+                    <div class=" col-sm-6 col-md-6 col-lg-3 section-md-t3" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                        <h4 style="color: #57cd69; text-align: left;">Contact</h4>
+                        <ul>
+                            <li><a> <i class="fa fa-phone" aria-hidden="true" style="color: #06914e;"></i> +91 7529598231</a></li>
+                            <li><a><i class="fa fa-envelope" aria-hidden="true" style="color: #06914e;"></i>  Enquiry@finloitte.com</a></li>
+                            <li><a><i class="fa fa-envelope" aria-hidden="true" style="color: #06914e;"></i>  Technology@finloitte.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright-footer">
+                    <p class="copyright color-text-a">
+                        &copy; Copyright 2024
+                        <span style="color: #1919bf; font-size: 23px; font-weight: 700;">Finl</span><span style="color: #06914e;font-size: 23px; font-weight: 700;">oitt</span><span style="color: #1919bf; font-size: 23px; font-weight: 700;">e</span>                            All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--/ Footer End /-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    </script>
+    <script src="sweetalert2.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/popper/popper.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/scrollreveal/scrollreveal.min.js"></script>
+    <script src="js/new1/scrollreveal.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="js/new1/owl-carousel.js"></script>
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+    <script src="js/new1/custom.js"></script>
+    <script src="js/new1/jquery-2.1.0.min.js"></script>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <!-- JS | all script for all pages -->
+    <script src="js/vs-all-js.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

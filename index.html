@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Finloitte</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicons -->
+    <link href="" rel="icon">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/susthira-all.css">
+    <link href="css/all-css-files.css" rel="stylesheet" type="text/css">
+    <link href="css/style-main.css" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="sweetalert2.css">
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            // Set a minimum display time for the preloader (in milliseconds)
+            var minDisplayTime = 2000; // 2 seconds
+            // Show the preloader
+            var preloader = document.getElementById('preloader');
+            preloader.innerHTML = '<div class="spinner"></div>';
+            // Enable features or content after the minimum display time
+            setTimeout(function() {
+                // Hide the preloader
+                preloader.style.display = 'none';
+                // Add your code to enable certain features or content here
+                // For demonstration purposes, let's just mark the document as loaded
+                document.body.classList.add('loaded');
+            }, minDisplayTime);
+        });
+    </script>
+    <div>
+        <div id="preloader">
+            <img src="images/finloitte logo final-01-01.jpg">
+        </div>
+    </div>
+    <!-- <div class="preloader">
+        <img src="images/finloitte logo final-01-01.jpg" alt="Loading..." class="preloader-logo">
+    </div> -->
+    <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+        <div class="container">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+            <a class="navbar-brand text-brand" href="index.html" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <img src="images/finloitte logo final-01-01.jpg">
+            </a>
+            <div class="navbar-collapse collapse justify-content-center" id="navbarDefault" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                        <div class="dropdown">
+                            <ul>
+                                    <li class="dropdown-link-second">
+                                        <a class="dropdown-link-second" href="services.html">Financial Analysis and Planning Services</a>
+                                        <div class="dropdown">
+                                            <ul>
+                                                <li class="dropdown-link"><a href="services.html">Accounting & Bookkeeping</a></li>
+                                                <li class="dropdown-link"><a href="services.html">Assessment Of Financial Health Services</a></li>
+                                                <li class="dropdown-link"><a href="services.html">Company Operations Feasibility Studies</a></li>
+                                                <li class="dropdown-link"><a href="services.html">Business Feasibility Studies Services</a></li>
+                                                <li class="dropdown-link"><a href="services.html">Real Estate Feasibility Studies Services</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                <li class="dropdown-link-second"><a href="services.html">Tax and Compliance Services</a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li class="dropdown-link"><a href="services.html">Corporate Tax Registration & filing </a></li>
+                                            <li class="dropdown-link"><a href="services.html">VAT Registration & VAT filing </a></li>
+                                            <li class="dropdown-link"><a href="services.html">VAT Assessment & Advisory </a></li>
+                                            <li class="dropdown-link"><a href="services.html">Transfer Pricing </a></li>
+                                            <li class="dropdown-link"><a href="services.html">RERA Budgets for Owner Associations</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Company Formation Services</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Bank Account Opening Services</a></li>
+                                        </ul>
+                                    </div></li>
+                                <li class="dropdown-link-second"><a href="services.html">Risk Management and Advisory Services</a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li class="dropdown-link"><a href="services.html">Audit & Assurance Support Services</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Risk Management Advisory</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Fund Raising Advisory Services</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Startup Consultancy Services</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Virtual CFO Services</a></li>
+                                        </ul>
+                                    </div></li>
+                                <li class="dropdown-link-second"><a href="services.html">Technology Services</a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li class="dropdown-link"><a href="services.html">Business Process Outsourcing</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Financial Year and Period Closing</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Cyber Security Services and Solutions </a></li>
+                                            <li class="dropdown-link"><a href="services.html">Oracle EBS Turnkey Services </a></li>
+                                            <li class="dropdown-link"><a href="services.html">Business Intelligence Reporting</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Power BI Implementation and Dashboards</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Robotic Process Automation</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Oracle Cloud Migration</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Outsourced Support Services</a></li>
+                                        </ul>
+                                    </div></li>
+                                <li class="dropdown-link-second"><a href="services.html">Other Services</a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li class="dropdown-link"><a href="services.html">Cloud Computing Solutions</a></li>
+                                            <li class="dropdown-link"><a href="services.html">Web and Mobile Applications Development  </a></li>
+                                            <li class="dropdown-link"><a href="services.html">Digital Marketing campaigns and services  </a></li>
+                                            <li class="dropdown-link"><a href="services.html">Domains and Hosting Services</a></li>
+                                            <li class="dropdown-link"><a href="services.html">AIML and ChatGPT Services </a></li>
+                                        </ul>
+                                    </div></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="dropdown-link"><a href="products.html">Financial Management Reporting</a></li>
+                                <li class="dropdown-link"><a href="products.html">Financial Dashboards</a></li>
+                                <li class="dropdown-link"><a href="products.html">Data Transactional Reporting</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultation.html">Consultation</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="dropdown-link"><a href="consultation.html">Financial Risk Management Assessment</a></li>
+                                <li class="dropdown-link"><a href="consultation.html">Technology Risk Management Assessment</a></li>
+                                <li class="dropdown-link"><a href="consultation.html">IT Auditing and Compliance Management</a></li>
+                                <li class="dropdown-link"><a href="consultation.html">Finance Auditing and Compliance Managementw</a></li>
+                                <li class="dropdown-link"><a href="consultation.html">Project Management</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html">About&nbsp;us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact&nbsp;us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/ Nav End /-->
+    <!--/ Carousel Star /-->
+    <div class="intro intro-carousel">
+        <div id="carousel" class="owl-carousel owl-theme">
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/ai-min.jpg)">
+                <div class="overlay overlay-a"></div>
+                <div class="intro-content display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="intro-body">
+                                        <h3 class="intro-title mb-4">
+                                            <span class="color-b">Trusted Partner  </span><br> for Financial and Artificial Intelligence <br> Technology Services
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/banner-businesstech.jpg)">
+                <div class="overlay overlay-a"></div>
+                <div class="intro-content display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="intro-body">
+                                        <h3 class="intro-title mb-4">
+                                            Trusted Technology <br> <span class="color-b">Partner to Simply  </span> <br> Business Processesdestinations.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/banner-dashboad.jpg)">
+                <div class="overlay overlay-a"></div>
+                <div class="intro-content display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="intro-body">
+                                        <h3 class="intro-title mb-4">
+                                            Clear Visibility of your <br> business with ready <br><span class="color-b">Decision-making Dashboards.</span> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/p-banner-1.jpg)">
+                <div class="overlay overlay-a"></div>
+                <div class="intro-content display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="intro-body">
+                                        <h3 class="intro-title mb-4">
+                                            Improve your business <br> model with Artificial <br><span class="color-b">Intelligence enabled Processes.</span> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/p-banner-2.jpg)">
+                <div class="overlay overlay-a"></div>
+                <div class="intro-content display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="intro-body">
+                                        <h3 class="intro-title mb-4">
+                                            Maximize Your Wealth <br> with Our Expert <br><span class="color-b">Financial Planning Services.</span> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/p-banner-5.jpg)">
+                <div class="overlay overlay-a"></div>
+                <div class="intro-content display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="intro-body">
+                                        <h3 class="intro-title mb-4">
+                                            Minimize Risks and Maximize <br> Returns with Our Risk <br><span class="color-b">Management Services.</span> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/p-banner-4.jpg)">
+                <div class="overlay overlay-a"></div>
+                <div class="intro-content display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="intro-body">
+                                        <h3 class="intro-title mb-4">
+                                            Manage Taxes smartly <br> to boost savings by our <br><span class="color-b">Tax Planning Service.</span> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/p-banner-8.jpg)">
+                <div class="overlay overlay-a"></div>
+                <div class="intro-content display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="intro-body">
+                                        <h3 class="intro-title mb-4">
+                                            We embrace your financial <br> pain points and provide you with <br><span class="color-b">expert advisory services.</span> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/p-banner-9.jpg)">
+                <div class="overlay overlay-a"></div>
+                <div class="intro-content display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="intro-body">
+                                        <h3 class="intro-title mb-4">
+                                            Secure Your Future <br> with Our Personalized <br><span class="color-b">Investment Strategies.</span> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/p-banner-6.jpg)">
+                <div class="overlay overlay-a"></div>
+                <div class="intro-content display-table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="intro-body">
+                                        <h3 class="intro-title mb-4">
+                                            Retire with Confidence - Let Our Retirement Planning Experts Optimize Your <br> Finances with Our
+                                            <br><span class="color-b">Let Us Help You 
+E Comprehensive Financial Analysis.</span> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- carousel End -->
+<!--/ about us Start /-->
+<section style="text-align: center;" class="section-about background-image py-5">
+    <div class="container" style="background-image: url(\images\ai-min.jpg);">
+        <div class="row">
+            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <div class="justify-content-between" >
+                    <div class="">
+                        <h1 class="title-a">ABout Us</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <div class="row">
+                    <!-- <div class="col-md-6 col-lg-5">
+          <img src="images/leaves-2b.jpg" alt="" class="img-fluid">
+        </div> -->
+                    <div class="col-md-12 col-lg-12 section-md-t3" style="padding-left:5%">
+                        <div class="">
+                            <p class="abouttxt">At FINLOITTE, we are a team of experienced consultants dedicated to helping our clients achieve their financial goals and objectives. Our firm was founded on the belief that everyone should have access to high-quality financial
+                                advice and services, regardless of their wealth or financial background.<br><br> Our team is made up of experts in a variety of financial fields, including investment management, financial planning, business consulting,
+                                and corporate finance. We have years of experience working with individuals, small businesses, and large corporations, and we are committed to providing customized solutions tailored to meet each client's unique needs
+                                and circumstances.<br/><br> Finloitte Technology team having 20 plus years of experience in diversified business to provide technology and business solutions. Our technology team of SMEs are and pool of technical resources
+                                work 24/7 to support round the clock worldwide.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About End -->
+<!--/ Products  Star /-->
+<section class="section-property py-5" style="background-color: #edecff; ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" data-aos="" data-aos-delay="100" data-delay-duration="1000">
+                <div class="justify-content-between mb-4">
+                    <div class="text-center">
+                        <h2 class="title-a">Finloitte products</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-5 project-column" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <div class=" owl-drag owl-item">
+                    <div class="carousel-item-b">
+                        <div class="card-box-a card-shadow">
+                            <div class="img-box-a">
+                                <img src="images/product1.jpg" alt="Forest" class="img-a img-fluid">
+                            </div>
+                            <div class="card-overlay">
+                                <div class="card-overlay-a-content">
+                                    <div class="card-header-a">
+                                        <h2 class="card-title-a">
+                                            <a href="#">
+                                                <div class="middle">
+                                                </div>
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="card-body-a">
+                                        <div class="price-box d-flex">
+                                            <span class="price-a">Financial Management Reporting</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-5 project-column" data-aos="fade-down" data-aos-delay="70" data-delay-duration="700">
+                <div class=" owl-drag owl-item">
+                    <div class="carousel-item-b">
+                        <div class="card-box-a card-shadow">
+                            <div class="img-box-a">
+                                <img src="images/product2.jpg" alt="Forest" class="img-a img-fluid">
+                            </div>
+                            <div class="card-overlay">
+                                <div class="card-overlay-a-content">
+                                    <div class="card-header-a">
+                                        <h2 class="card-title-a">
+                                            <a href="#">
+                                                <div class="middle">
+                                                </div>
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="card-body-a">
+                                        <div class="price-box d-flex">
+                                            <span class="price-a">Financial Dashboards</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 project-column" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <div class=" owl-drag owl-item">
+                    <div class="carousel-item-b">
+                        <div class="card-box-a card-shadow">
+                            <div class="img-box-a">
+                                <img src="images/product3.png" alt="Forest" class="img-a img-fluid">
+                            </div>
+                            <div class="card-overlay">
+                                <div class="card-overlay-a-content">
+                                    <div class="card-header-a">
+                                        <h2 class="card-title-a">
+                                            <a href="#">
+                                                <div class="middle">
+                                                    < </div>
+                                            </a>
+                                        </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <span class="price-a">Data Transactional Reporting</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- products End -->
+<!-- services start -->
+    <div class="main-content">
+        <!-- Section: inner-header -->
+        <section  " id="gallery" class="py-5" style="">
+            <div class="container">
+                <div class="col-md-6 col-lg-12 section-md-t3 text-center" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                    <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                        <div class=" justify-content-between" style="text-align: center;">
+                            <div class="">
+                                <h2 class="title-a">Our Services</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-content" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                    <div class="row">
+                        <!-- services Grid -->
+                        <div class="owl-carousel-4col" data-nav="true" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                            <div class="item" data-aos="fade-down-left" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-1.jpg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Financials advisory </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-2.jpg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Virtual CFO </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-3.jpg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Accounting & Bookkeeping </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-4.png">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Audit & Assurance Support </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-5.jpg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Business Feasibility Studies & Business Valuation </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-6.jpg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Business Process Optimization </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-7.jpeg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Technology Advisory </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-8.jpg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Assessment Of Financial Health </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-9.jpg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Financial Year and Period Closing </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-10.jpeg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Cyber Security </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-11.jpg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">ERP Implementation </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                                <div class="work-gallery">
+                                    <div class="gallery-thumb">
+                                        <div class="fixedimg">
+                                            <img class="img-fullwidth class-fixwidth" alt="" src="images/ser-12.jpg">
+                                        </div>
+                                        <div class="gallery-overlay"></div>
+                                        <div class="gallery-contect">
+                                            <ul class="styled-icons icon-bordered icon-circled icon-sm">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-bottom-part text-center">
+                                        <h4 class="title text-uppercase font-raleway font-weight-600 m-0">Business Intelligence Reporting </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End services Grid -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- end main-services -->
+<!-- Service Start -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+            <div class="justify-content-between" style="text-align: center;">
+                <div class="">
+                    <h1 style="padding-top: 20px;" class="title-b">Explore our Consultation</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item p-4">
+                    <div class="overflow-hidden mb-4">
+                        <img class="img-fluid" src="images/p-banner-8.jpg" alt="">
+                    </div>
+                    <h4 class="mb-3">Financial Health Evaluation</h4>
+                    <p>If you’re an entrepreneur or business owner, you need to know how your company is performing for several reasons. Having a clear picture of financial health can help you make more informed decisions about your organization’s direction
+                        </p>
+                    <a class="btn-slide mt-2" href=""><i >&#10140;</i><span>Consult</span></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item p-4">
+                    <div class="overflow-hidden mb-4">
+                        <img class="img-fluid" src="images/p-banner-8.jpg" alt="">
+                    </div>
+                    <h4 class="mb-3">Risk Management Assessment</h4>
+                    <p>Risk assessment is a function within occupational safety and health (OSH) risk management that focuses on identifying potential hazards. The goal is to identify hazards, then analyze and evaluate the risks they create</p>
+                    <a class="btn-slide mt-2" href=""><i>&#10140;</i><span>Consult</span></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item p-4">
+                    <div class="overflow-hidden mb-4">
+                        <img class="img-fluid" src="images/p-banner-8.jpg" alt="">
+                    </div>
+                    <h4 class="mb-3">Financial Risk Management Assessment</h4>
+                    <p>A financial risk assessment can help you identify the risk level specific to your business, prioritize those risks, develop ways to avoid them and outline steps to manage them should they happen. A financial risk assessment also helps you understand your appetite for risk.</p>
+                    <a class="btn-slide mt-2" href=""><i >&#10140;</i><span>Consult</span></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item p-4">
+                    <div class="overflow-hidden mb-4">
+                        <img class="img-fluid" src="images/p-banner-8.jpg" alt="">
+                    </div>
+                    <h4 class="mb-3">Technology Risk Management Assessment</h4>
+                    <p>Technology risk assessment focuses broadly on the risks associated with using, managing, operating, and adopting technology within an organization. It covers many risks like cyber threats, system failures, data problems, and following compliance with technology standards.</p>
+                    <a class="btn-slide mt-2" href=""><i >&#10140;</i><span>Consult</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ approch us Start /-->
+<section style="background-color: rgb(240, 240, 240);" class="section-about py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <div class="justify-content-between" style="text-align: center;">
+                    <div class="">
+                        <h1 class="title-a">Our Approach</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                <div class="row">
+                    <!-- <div class="col-md-6 col-lg-5">
+          <img src="images/leaves-2b.jpg" alt="" class="img-fluid">
+        </div> -->
+                    <div class="col-md-12 col-lg-12 section-md-t3" style="padding-left:5%">
+                        <div >
+                            <p class="">We as Finloitte Core team having 20+ years of experience in the Finance an d Technology arena, our adopted approach will always do the RTA and assessment to offer applied and implemented solutions which will make sure to
+                                best fit and simply the financial and technology pain-points to achieve financial and technology goals and vision.<br>
+                                <div style="color: #06914e;">Our approach to financial and technology consulting is based on three core principles:</div>
+                                <span style="color: #06914e;">Personalization:</span> We believe that each client deserves a customized financial solution that takes into account their individual goals, preferences, and circumstances. We take the
+                                time to get to know our clients and develop a deep understanding of their needs and objectives.<br>
+                                <span style="color: #06914e;">Expertise:</span> Our team of financial consultants is made up of experts in a variety of fields, with years of experience and a deep knowledge of the financial industry. We stay up-to-date
+                                on the latest trends and developments, so we can provide our clients with the best advice and guidance possible.<br>
+                                <span style="color: #06914e;">Integrity:</span> At FINLOITTE, we believe in doing business with integrity and transparency. We are committed to providing our clients with honest, unbiased advice, and we always act in
+                                their best interests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--our approch us end-->
+<!--/ footer Star /-->
+<section class="contact py-5" style="background-image: url(images/footer-background.jpg); color: rgb(207, 207, 207);" >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class=" col-sm-6 col-md-6 col-lg-3 section-md-t3" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                        <h2 style=" font-size: 3rem; text-align: left;">
+                            <span style="color: #ffffff; font-family: fin; font-weight: bold;">Finl</span><span style="color: #57cd69; font-family: fin;" >oitt</span><span style="color: #ffffff; font-family:fin; font-weight: bold ;">e</span></h2>
+                        <P class="text-left">Finloitte Technology team having 20 plus years of experience in diversified business to provide technology and business solutions. Our technology team of SMEs are and pool of technical resources work 24/7 to support round the
+                            clock worldwide. </P>
+                    </div>
+                    <div class=" col-sm-6 col-md-6 col-lg-3 section-md-t3" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                        <h4 style="color: #57cd69; text-align: left;">Services</h4>
+                        <ul>
+                            <li>Financials advisor</li>
+                            <li>Virtual CFO </li>
+                            <li>Accounting & Bookkeeping</li>
+                            <li>Audit & Assurance Support </li>
+                            <li>Business Feasibility Studies & Business Valuation </li>
+                            <li>Business Process Optimization</li>
+                            <li>Technology Advisory </li>
+                            <!-- <li style="color: black;">6.Assessment Of Financial Health </li>
+<li style="color: black;">7.	Financial Year and Period Closing</li>
+<li style="color: black;">8.	ERP Implementation </li>
+<li style="color: black;">9.	Cyber Security </li>
+<li style="color: black;">10.Business Intelligence Reporting</li> -->
+                        </ul>
+                    </div>
+                    <div class=" col-sm-6 col-md-6 col-lg-3 section-md-t3" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                        <h4 style="color: #57cd69; text-align: left;">consultation</h4>
+                        <ul>
+                            <li>Financial Health Evaluation</li>
+                            <li>Risk Management Assessment </li>
+                            <li>Cash Flow Analysis</li>
+                            <li>Debt Management Review</li>
+                            <li>Investment Portfolio Review </li>
+                            <!-- <li style="color: black;">6.	Retirement Readiness Assessment</li>
+<li style="color: black;">7.	Financial Management Services </li>
+<li style="color: black;">8.	Proof of Concept of Business Models</li>
+<li style="color: black;">9.	Financial Year and Period Closing</li>
+<li style="color: black;">10. ERP Implementation </li>
+<li style="color: black;">11. Cyber Security </li>
+<li style="color: black;">12.Business Intelligence Reporting</li> -->
+                        </ul>
+                    </div>
+                    <div class=" col-sm-6 col-md-6 col-lg-3 section-md-t3" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+                        <h4 style="color: #57cd69; text-align: left;">Contact</h4>
+                        <ul>
+                            <li><a><i class="fa fa-phone" aria-hidden="true" style="color: #06914e;"></i> +91 7529598231</a></li>
+                            <li><a><i class="fa fa-envelope" aria-hidden="true" style="color: #06914e;"></i>  Enquiry@finloitte.com</a></li>
+                            <li><a><i class="fa fa-envelope" aria-hidden="true" style="color: #06914e;"></i>  Technology@finloitte.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright-footer">
+                    <p class="copyright color-text-a">
+                        &copy; Copyright 2024
+                        <span style="color: #1919bf;font-family: fin; font-weight: bold; font-size: 23px; font-weight: 700;">Finl</span><span style="color: #06914e;font-size: 23px; font-weight: 500;">oitt</span><span style="color: #1919bf; font-size: 23px;font-family: fin; font-weight: bold; font-weight: 700;">e</span>                            All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--/ Footer End /-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    </script>
+    <script src="sweetalert2.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/popper/popper.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/scrollreveal/scrollreveal.min.js"></script>
+    <script src="js/new1/scrollreveal.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="js/new1/owl-carousel.js"></script>
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+    <script src="js/new1/custom.js"></script>
+    <script src="js/new1/jquery-2.1.0.min.js"></script>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <!-- JS | all script for all pages -->
+    <script src="js/vs-all-js.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
