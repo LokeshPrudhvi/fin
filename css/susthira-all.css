@@ -38,6 +38,9 @@
     .column {
         width: 100%;
     }
+    .navbar-brand .text-brand{
+        height: 10px;
+    }
 }
 
 #frequently-question .left-text {
@@ -90,6 +93,9 @@ hgroup {
     .accordion-head {
         padding: 1rem;
         font-size: 1.2rem;
+    }
+    .navbar-brand .text-brand{
+        height: 10px;
     }
 }
 

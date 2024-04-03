@@ -2276,6 +2276,9 @@ textarea.input100 {
     .sinse-box1 .sinse-title {
         font-size: 1.7rem;
     }
+    .navbar-brand .text-brand{
+        max-width: 100px;
+    }
 }
 
 @media (min-width: 1200px) {
