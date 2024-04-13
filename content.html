@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="assets/js/color-modes.js"></script>  
+    <link href="" rel="icon">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/susthira-all.css">
+
+    <link href="css/style-main.css" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="sweetalert2.css">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+main {
+  height: 100vh;
+  height: -webkit-fill-available;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.dropdown-toggle { outline: 0; }
+
+.btn-toggle {
+  padding: .25rem .5rem;
+  font-weight: 600;
+  color: var(--bs-emphasis-color);
+  background-color: transparent;
+}
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(var(--bs-emphasis-color-rgb), .85);
+  background-color: var(--bs-tertiary-bg);
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+}
+
+[data-bs-theme="dark"] .btn-toggle::before {
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28255,255,255,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(var(--bs-emphasis-color-rgb), .85);
+}
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  padding: .1875rem .5rem;
+  margin-top: .125rem;
+  margin-left: 1.25rem;
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background-color: var(--bs-tertiary-bg);
+}
+
+.scrollarea {
+  overflow-y: auto;
+}
+p{
+  padding-top: 10px;
+  font-size: 1;
+}
+
+    </style>
+
+    <!-- Custom styles for this template -->
+  </head>
+  <body>
+        <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            // Set a minimum display time for the preloader (in milliseconds)
+            var minDisplayTime = 1000; // 2 seconds
+            // Show the preloader
+            var preloader = document.getElementById('preloader');
+            preloader.innerHTML = '<div class="spinner"></div>';
+            // Enable features or content after the minimum display time
+            setTimeout(function() {
+                // Hide the preloader
+                preloader.style.display = 'none';
+                // Add your code to enable certain features or content here
+                // For demonstration purposes, let's just mark the document as loaded
+                document.body.classList.add('loaded');
+            }, minDisplayTime);
+        });
+    </script>
+    <div>
+      <div id="preloader">
+          <img src="images/finloitte logo final-01-01.jpg">
+      </div>
+  </div>
+  <!-- <div class="preloader">
+      <img src="images/finloitte logo final-01-01.jpg" alt="Loading..." class="preloader-logo">
+  </div> -->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <a class="navbar-brand text-brand" href="index.html" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+            <img src="images/finloitte logo final-01-01.jpg">
+        </a>
+        <div class="navbar-collapse collapse justify-content-center" id="navbarDefault" data-aos="fade-up" data-aos-delay="100" data-delay-duration="1000">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="services.html">Services</a>
+                    <div class="dropdown">
+                        <ul>
+                                <li class="dropdown-link-second">
+                                    <a class="dropdown-link-second" href="services.html">Financial Analysis and Planning Services</a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li class="dropdown-link"><a href="#Accounting" target="_self">Accounting & Bookkeeping</a></li>
+                                            <li class="dropdown-link"><a href="#Assessment" target="_self">Assessment Of Financial Health Services</a></li>
+                                            <li class="dropdown-link"><a href="content.html#Company" target="_self">Company Operations Feasibility Studies</a></li>
+                                            <li class="dropdown-link"><a href="content.html#Business" target="_self">Business Feasibility Studies Services</a></li>
+                                            <li class="dropdown-link"><a href="content.html#Real" target="_self"  >Real Estate Feasibility Studies Services</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            <li class="dropdown-link-second"><a href="services.html">Tax and Compliance Services</a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="content.html#Corporate">Corporate Tax Registration & filing </a></li>
+                                        <li class="dropdown-link"><a href="content.html#VAT_registration">VAT Registration & VAT filing </a></li>
+                                        <li class="dropdown-link"><a href="content.html#VAT_assessment">VAT Assessment & Advisory </a></li>
+                                        <li class="dropdown-link"><a href="content.html#Transfer">Transfer Pricing </a></li>
+                                        <li class="dropdown-link"><a href="content.html#RERA">RERA Budgets for Owner Associations</a></li>
+                                        <li class="dropdown-link"><a href="content.html#Company">Company Formation Services</a></li>
+                                        <li class="dropdown-link"><a href="content.html#Bank">Bank Account Opening Services</a></li>
+                                    </ul>
+                                </div></li>
+                            <li class="dropdown-link-second"><a href="services.html">Risk Management and Advisory Services</a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="content.html#Audit">Audit & Assurance Support Services</a></li>
+                                        <li class="dropdown-link"><a href="content.html#Risk">Risk Management Advisory</a></li>
+                                        <li class="dropdown-link"><a href="content.html#Fund">Fund Raising Advisory Services</a></li>
+                                        <li class="dropdown-link"><a href="content.html#Startup">Startup Consultancy Services</a></li>
+                                        <li class="dropdown-link"><a href="content.html#Virtual">Virtual CFO Services</a></li>
+                                    </ul>
+                                </div></li>
+                            <li class="dropdown-link-second"><a href="services.html">Technology Services</a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="services.html">Business Process Outsourcing</a></li>
+                                        <li class="dropdown-link"><a href="services.html">Financial Year and Period Closing</a></li>
+                                        <li class="dropdown-link"><a href="services.html">Cyber Security Services and Solutions </a></li>
+                                        <li class="dropdown-link"><a href="services.html">Oracle EBS Turnkey Services </a></li>
+                                        <li class="dropdown-link"><a href="services.html">Business Intelligence Reporting</a></li>
+                                        <li class="dropdown-link"><a href="services.html">Power BI Implementation and Dashboards</a></li>
+                                        <li class="dropdown-link"><a href="services.html">Robotic Process Automation</a></li>
+                                        <li class="dropdown-link"><a href="services.html">Oracle Cloud Migration</a></li>
+                                        <li class="dropdown-link"><a href="services.html">Outsourced Support Services</a></li>
+                                    </ul>
+                                </div></li>
+                            <li class="dropdown-link-second"><a href="services.html">Other Services</a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="services.html">Cloud Computing Solutions</a></li>
+                                        <li class="dropdown-link"><a href="services.html">Web and Mobile Applications Development  </a></li>
+                                        <li class="dropdown-link"><a href="services.html">Digital Marketing campaigns and services  </a></li>
+                                        <li class="dropdown-link"><a href="services.html">Domains and Hosting Services</a></li>
+                                        <li class="dropdown-link"><a href="services.html">AIML and ChatGPT Services </a></li>
+                                    </ul>
+                                </div></li>
+                        </ul>
+                    </div>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                    <div class="dropdown">
+                        <ul>
+                            <li class="dropdown-link"><a href="Financial_managemnt.html">Financial Management Reporting</a></li>
+                            <li class="dropdown-link"><a href="Financial_dashboard.html">Financial Dashboards</a></li>
+                            <li class="dropdown-link"><a href="Data_Transactional.html">Data Transactional Reporting</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consultation.html">Consultation</a>
+                    <div class="dropdown">
+                        <ul>
+                            <li class="dropdown-link"><a href="Technology_risk_managment.html">Technology Risk Management Assessment</a></li>
+                            <li class="dropdown-link"><a href="IT_Audits.html">IT Auditing and Compliance Management</a></li>
+                            <li class="dropdown-link"><a href="Finance_audits.html">Finance Auditing, Risk and Compliance Management</a></li>
+                            <li class="dropdown-link"><a href="Project_man.html">Project Management</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about_us.html">About&nbsp;us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html">Contact&nbsp;us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <!--/ Nav End /-->
+<div style="grid-template-columns: auto, auto;">
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div  >
+  <div style="display: flex; position: absolute;">
+  <div style="display: flex; grid-template-columns: auto,auto;">
+  <div style="background-color:rgb(255, 255, 255); margin-left:15%; display: flex; justify-content: end; margin-top: 80px; position: ;">
+  <div class="flex-shrink-0 p-3" style="width: 280px;">
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+          Financial Services
+        </button>
+        <div class="collapse show" id="home-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#Accounting" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Accounting & Bookkeeping</a></li>
+            <li><a href="#Audit" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Audit & Assurance Support Services</a></li>
+            <li><a href="#Business" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Business Feasibility Studies Servicess</a></li>
+            <li><a href="#Assessment" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Assessment Of Financial Health Services</a></li>
+            <li><a href="#Company" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Company Operations Feasibility Studies</a></li>
+            <li><a href="#Risk" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Risk Management Advisory</a></li>
+            <li><a href="#Real" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Real Estate Feasibility Studies Services</a></li>
+            <li><a href="#Fund" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Fund Raising Advisory Services</a></li>
+            <li><a href="#Corporate" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Corporate Tax Registration & filing Services</a></li>
+            <li><a href="#Vat_registration" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">VAT Registration & VAT filing Services</a></li>
+            <li><a href="#Vat_Assessment" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">VAT Assessment & Advisory Services </a></li>
+            <li><a href="#Startup" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Startup Consultancy Services</a></li>
+            <li><a href="#Bank" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Bank Account Opening Services </a></li>
+            <li><a href="#Transfer" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Transfer Pricing Services</a></li>
+            <li><a href="#Virtual" style="padding-top: 10px;" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Virtual CFO Services</a></li>
+
+          </ul>
+        </div>  
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+          <!-- Products -->
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+          <!-- Other services -->
+        </button>
+        <div class="collapse" id="orders-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
+          </ul>
+        </div>
+      </li>
+    </div>
+    
+  <div style="background-color: #f8f4ff; margin-top: px; margin-right: 15%; margin-left: auto; padding: 40px; flex-grow: 1; position: relative; max-height: 90vh; overflow-y: auto; scrollbar-width: none;">
+    <h1 style="background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px;" id="Accounting">Accounting & Bookkeeping</h1>
+    <p>
+      <img style="width: 100%;" src="images/accountingand bookkeeping.jpg">
+<strong>&emsp;A</strong>ccounting and bookkeeping are essential components of any successful business. While both involve the tracking of financial transactions, there are some key differences between the two.
+Bookkeeping is the process of recording financial transactions, such as purchases, sales, receipts, and payments. It involves keeping a detailed record of all financial transactions in a business, including cash flow, invoices, and bank statements. Bookkeeping is crucial for keeping track of a business's financial health and ensuring that all financial information is accurate and up to date.
+</p>
+Accounting, on the other hand, involves analyzing and interpreting financial data in order to make strategic decisions. It involves taking the financial data collected through bookkeeping and using it to create financial reports, analyze business trends, and make informed decisions about the future of the business. Accounting involves a more comprehensive understanding of the financial health of the business and how it is performing over time.
+<p>
+
+Both bookkeeping and accounting are essential to the success of any business. Without accurate bookkeeping, a business will not be able to track its finances effectively or make informed financial decisions. Without accounting, a business may miss opportunities to improve its financial performance or make strategic investments that could benefit the business in the long run.
+</p>
+<p>To ensure that their bookkeeping and accounting are accurate and up-to-date, many businesses choose to work with professional bookkeepers and accountants. These professionals can help businesses manage their finances more effectively, providing valuable insights into their financial health and performance. By working with these professionals, businesses can focus on their core operations while leaving the financial management to the experts.
+    </p>
+    <div style="display: flex; justify-content: center; background-color: ; margin-bottom: 20px;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+      <button href="about_us.html" style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;" >About Us</button></div>
+  <h1 style="background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Audit">Audit & Assurance Support Services:</h1>
+  <img src="images/aydit.jpeg">
+  <p>
+At our financial consultancy, we offer comprehensive audit and assurance support services to businesses operating in the UAE. Our team of experienced professionals can provide independent and objective assessments of a business's financial statements, internal controls, and risk management processes, helping businesses identify areas for improvement and maintain compliance with regulatory requirements.
+Our audit and assurance support services include:</p>
+<p>	<strong>1.Financial statement audits:</strong> We conduct thorough financial statement audits to provide an independent and objective assessment of a business's financial performance.</p>
+<p><strong>	Internal control reviews: </strong> review a business's internal controls to identify areas for improvement and mitigate the risk of fraud or error.</p>
+<p><strong>3.	Compliance reviews: </strong>We conduct compliance reviews to ensure that a business is meeting its legal and regulatory obligations, including tax and accounting requirements.</p>
+<p><strong>4.	Risk assessments: </strong>We conduct risk assessments to help businesses identify potential risks and develop strategies to mitigate them.</p>
+<p><strong>5.	Special-purpose audits:</strong> We conduct special-purpose audits, including forensic audits and due diligence reviews, to support business transactions and litigation.</p>
+<p>At our financial consultancy, we understand the importance of audit and assurance support for businesses operating in the UAE. Our team of experts can provide comprehensive support and guidance throughout the audit process, ensuring that businesses maintain compliance with regulatory requirements and have a clear understanding of their financial performance and risk exposure.</p>
+  </p>
+  <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+    <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+    <h1 style="background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Business">Business Feasibility Studies & Business Valuation Services:</h1>
+    <img src="images/aydit.jpeg">
+    <p>
+      At our financial consultancy, we provide comprehensive business valuation services to businesses operating in the UAE. Our team of experienced professionals can assist businesses in determining the value of their assets, liabilities, and equity, helping them make informed decisions about mergers and acquisitions, capital raising, and other strategic initiatives.
+      Our business valuation services include:
+      </p>
+  <p>	<strong>1.	Asset valuation: </strong> We conduct thorough asset valuations to determine the value of a business's tangible and intangible assets, including real estate, equipment, intellectual property, and goodwill.</p>
+  <p><strong>	2.	Liability valuation: </strong> We evaluate a business's liabilities, including loans, leases, and other obligations, to determine the impact on the business's overall value.</p>
+  <p><strong>3.	Equity valuation: </strong>We analyze a business's equity structure to determine the value of its ownership interests, including common and preferred stock, warrants, and options.</p>
+  <p><strong>4.	4.	Financial modeling: </strong>We use financial modeling techniques to project a business's future performance and estimate its future cash flows, helping to determine its present value.</p>
+  <p><strong>5.	5.	Due diligence support:</strong> We provide due diligence support to businesses and investors, ensuring that all relevant information is available and accurate.</p>
+  <p>At our financial consultancy, we understand the importance of business valuation for businesses operating in the UAE. Our team of experts can provide comprehensive support and guidance throughout the valuation process, ensuring that businesses have a clear understanding of their value and can make informed decisions about their strategic initiatives.</p>
+    </p>
+    <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+      <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+      <h1 style="background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Assessment">Assessment Of Financial Health Services</h1>
+      <img src="images/aydit.jpeg">
+      <p>
+        At FINLOITTE, we understand the paramount importance of ensuring financial health and stability for our clients. In today's dynamic economic landscape, individuals and businesses face ever-evolving challenges that necessitate a comprehensive assessment of their financial well-being. Our "Assessment Of Financial Health" services are designed to provide clients with a holistic evaluation of their financial status, empowering them to make informed decisions and pursue their financial goals with confidence.</p>
+    <p>	<strong>1.	Financial Health Evaluation:</strong> •	Our experienced financial advisors conduct a thorough analysis of clients' financial profiles, including assets, liabilities, income, and expenses.
+      •	Utilizing industry-leading tools and methodologies, we assess key financial metrics to gauge overall financial health and identify areas for improvement.
+      </p>
+    <p><strong>	2.	Risk Management Assessment:</strong> •	Our experienced financial advisors conduct a thorough analysis of clients' financial profiles, including assets, liabilities, income, and expenses.
+      •	Utilizing industry-leading tools and methodologies, we assess key financial metrics to gauge overall financial health and identify areas for improvement.
+      </p>
+    <p><strong>3.	Cash Flow Analysis: </strong>•	Our experienced financial advisors conduct a thorough analysis of clients' financial profiles, including assets, liabilities, income, and expenses.
+      •	Utilizing industry-leading tools and methodologies, we assess key financial metrics to gauge overall financial health and identify areas for improvement.
+      </p>
+    <p><strong>4.	Debt Management Review:</strong>•	Our experienced financial advisors conduct a thorough analysis of clients' financial profiles, including assets, liabilities, income, and expenses.
+      •	Utilizing industry-leading tools and methodologies, we assess key financial metrics to gauge overall financial health and identify areas for improvement.
+      </p>
+    <p><strong>5.	Investment Portfolio Review:</strong> •	Our experts review clients' investment portfolios to evaluate performance, risk exposure, and alignment with financial objectives.
+      •	We offer personalized recommendations to optimize asset allocation, diversification, and investment selection to maximize returns while managing risk.
+      </p>
+    <p><strong>6.	Retirement Readiness Assessment:</strong> •	Planning for retirement requires careful consideration of savings, investments, and future income needs.
+      •	We assess clients' retirement readiness, analyzing retirement savings accounts, pension plans, and other sources of retirement income to ensure adequacy and sustainability.
+      </p>
+
+    <p>At our financial consultancy, we understand the importance of audit and assurance support for businesses operating in the UAE. Our team of experts can provide comprehensive support and guidance throughout the audit process, ensuring that businesses maintain compliance with regulatory requirements and have a clear understanding of their financial performance and risk exposure.</p>
+      </p>
+      <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+        <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+        <h1 style="background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Company">Company Operations Feasibility Studies</h1>
+        <img src="images/aydit.jpeg">
+        <p>
+          In the fast-paced and competitive business landscape, making informed decisions is paramount for sustainable growth and success. At FINLOITTE, we recognize the importance of conducting thorough feasibility studies before embarking on new ventures or making significant operational changes. Our "Company Operations Feasibility Studies" service is designed to provide businesses with a comprehensive analysis of the viability and potential risks associated with their operational strategies.</p>
+      <p>	<strong>1.	Market Analysis:</strong> •	We conduct in-depth market research to assess the demand for products or services within the target market.
+        •	Our analysis includes an evaluation of market trends, competitive landscape, consumer behavior, and regulatory factors to identify opportunities and challenges.
+        </p>
+      <p><strong>	2.	Operational Assessment: </strong> •	We examine all aspects of the company's operations, including production processes, supply chain management, distribution channels, and resource allocation.
+        •	Through a detailed analysis, we identify inefficiencies, bottlenecks, and areas for optimization to enhance operational effectiveness and efficiency.
+        </p>
+      <p><strong>3.	Financial Analysis: </strong>•	Our team performs a thorough financial evaluation, analyzing revenue projections, cost structures, profit margins, and cash flow dynamics.
+        •	We assess the financial feasibility of proposed operational strategies, considering factors such as investment requirements, return on investment (ROI), and potential financial risks.
+        </p>
+      <p><strong>4.	Risk Management Review: </strong>•	We identify potential risks and uncertainties that may impact the success of the company's operational initiatives.
+        •	Through risk mitigation strategies and contingency planning, we help businesses proactively manage and mitigate potential risks, ensuring resilience and adaptability.
+        </p>
+      <p><strong>5.	Regulatory Compliance Assessment:</strong> •	We review regulatory requirements and compliance obligations relevant to the company's operations.  •	Our experts provide guidance on navigating complex regulatory frameworks and ensure adherence to applicable laws and industry standards.</p>
+      <p><strong>6.	Strategic Recommendations</strong> •	Based on our findings and analysis, we offer strategic recommendations and actionable insights to optimize operational performance and mitigate risks.
+        •	Our recommendations are tailored to the specific needs and objectives of each client, providing a roadmap for successful implementation and execution.
+        </p>
+        </p>
+        <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+          <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+          <h1 style="background: rgb(2,0,36);
+          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Risk">Risk Management Advisory</h1>
+          <img src="images/aydit.jpeg">
+        <p>	<strong>1.Financial statement audits:</strong> Risk management is a critical component of any business, especially in the financial industry. It involves identifying, assessing, and mitigating potential risks that could impact a company's financial performance, reputation, or operations.
+          A financial consultancy can help businesses manage their risks by providing expert guidance and advice on risk identification, assessment, and mitigation strategies. This involves analyzing a company's operations, financial performance, and industry trends to identify potential risks, such as market volatility, regulatory changes, operational inefficiencies, or cyber threats.
+          Once risks have been identified, a financial consultancy can help businesses assess the potential impact of each risk and develop a plan to mitigate or manage those risks. This could involve implementing risk management policies and procedures, such as internal controls, insurance coverage, or contingency planning. A financial consultancy can also provide ongoing monitoring and assessment of risks to ensure that the company is well-prepared to manage any unforeseen events that may occur.
+          One of the key benefits of working with a financial consultancy for risk management is the expertise and experience that they bring to the table. Financial consultancies have a deep understanding of risk management best practices and can provide valuable insights into the latest trends and strategies for managing risks. They can also provide an objective viewpoint on a company's risk profile and offer recommendations for improvement.
+          In addition, working with a financial consultancy for risk management can help businesses improve their overall financial performance by reducing the likelihood of unexpected losses or disruptions. This can help businesses maintain a competitive edge in their industry and build trust and confidence among their stakeholders.
+          Overall, risk management is an essential component of any business, and working with a financial consultancy can provide valuable support and guidance for managing risks effectively. By identifying potential risks, assessing their impact, and implementing mitigation strategies, businesses can better protect themselves against potential disruptions and improve their long-term financial performance
+          </p>
+         </p>
+          <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+            <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+            <h1 style="background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Real">Real Estate Feasibility Studies Services</h1>
+            <img src="images/aydit.jpeg">
+            <p>
+              Real estate feasibility studies are critical for real estate investors, developers, and lenders to determine the viability of a real estate development project. A feasibility study is a comprehensive analysis of all the factors that influence the success of a project, including market conditions, economic trends, financial projections, site analysis, and risk assessment.
+              As a consultancy firm, your role is to provide expert advice and guidance to your clients on real estate feasibility studies. Your first step is to gather all the necessary information about the project, including the project's goals, location, size, budget, and timeline.
+              Once you have all the necessary information, you will need to conduct a market analysis to determine the demand for the project. This includes studying the demographics, trends, and competition in the area. You will also need to evaluate the supply and demand of the property type, taking into account current and projected market conditions.
+              Next, you will conduct a site analysis to assess the property's physical attributes, including topography, accessibility, zoning, and environmental factors. This analysis will help determine the potential of the site and any potential roadblocks that could affect the project's feasibility.
+              You will then develop a financial model, including a cost-benefit analysis, to determine the project's profitability. This includes evaluating the costs associated with land acquisition, site preparation, construction, marketing, and sales. You will also analyze the potential revenue streams, including projected sales prices and rental income, to determine the project's overall profitability.
+              Finally, you will assess the project's risk by evaluating the potential challenges that could arise during the development process. This includes identifying regulatory and environmental risks, construction challenges, and market risks.
+              Once you have completed the feasibility study, you will provide your client with a comprehensive report that includes all the findings and recommendations. This report will help your client make an informed decision about whether or not to move forward with the project.
+              In conclusion, real estate feasibility studies are an essential tool for any real estate developer or investor. As a consultancy firm, your expertise in conducting these studies will be invaluable to your clients, helping them make informed decisions about their real estate investments.
+              </p>
+           </p>
+           <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+            <button  style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+            <h1 style="background: rgb(2,0,36);
+              background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Fund">Fund Raising Advisory Services</h1>
+              <img src="images/aydit.jpeg">
+              <p>
+                Fund raising is a critical component of business growth and expansion, and at our financial consultancy, we provide comprehensive fund raising advisory services to businesses in the UAE. Our team of experienced professionals can assist businesses with all aspects of fund raising, from identifying potential investors and preparing investment pitches to negotiating terms and closing deals.</p>
+              <p>	<strong>1.	Investor identification:</strong> We help businesses identify potential investors, including angel investors, venture capitalists, and private equity firms.
+              <p><strong>	2.	Investment pitch preparation:  </strong> We assist businesses in preparing investment pitches, including pitch decks, business plans, and financial projections.</p>
+              <p><strong>3.	Due diligence support:  </strong>We provide due diligence support to investors and businesses, ensuring that all relevant information is available and accurate.</p>
+              <p><strong>4.	Negotiation and deal structuring: </strong>We assist businesses in negotiating terms and structuring deals with investors, including equity stakes, valuation, and exit strategies
+                </p>
+              <p><strong>5.	Post-funding support: </strong> We provide ongoing support to businesses after funding has been secured, including financial management and reporting services.</p>
+              <p>AAt our financial consultancy, we understand the challenges faced by businesses when it comes to fund raising. Our team of experts can provide comprehensive support and guidance throughout the fund raising process, helping businesses navigate the complexities of securing funding and maximizing their chances of success</p>
+              </p>
+              <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+                <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+                <h1 style="background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Corporate">Corporate Tax Registration & filing Services</h1>
+                <img src="images/aydit.jpeg">
+                <p>
+                  At our financial consultancy, we provide comprehensive corporate tax services to businesses operating in the UAE. Our team of experienced professionals can assist businesses in navigating the complex corporate tax landscape, ensuring compliance with all relevant tax laws and regulations while minimizing tax liability.</p>
+                <p>	<strong>1.	Tax planning and advisory: </strong> We help businesses identify potential investors, including angel investors, venture capitalists, and private equity firms.
+                <p><strong>	2.	Tax compliance and reporting:   </strong> We assist businesses in preparing investment pitches, including pitch decks, business plans, and financial projections.</p>
+                <p><strong>4.	Transfer pricing:   </strong>We provide due diligence support to investors and businesses, ensuring that all relevant information is available and accurate.</p>
+                <p><strong>5.	Tax dispute resolution: </strong>We assist businesses in negotiating terms and structuring deals with investors, including equity stakes, valuation, and exit strategies
+                  </p>
+                <p>At our financial consultancy, we understand the importance of corporate tax compliance for businesses operating in the UAE. Our team of experts can provide comprehensive support and guidance throughout the corporate tax process, ensuring that businesses comply with all relevant regulations while minimizing tax liability.</p>
+                </p>
+                <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+                  <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+                  <h1 style="background: rgb(2,0,36);
+              background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Vat_registration">VAT Registration & VAT filing Services</h1>
+              <img src="images/aydit.jpeg">
+              <p>
+                Value Added Tax (VAT) registration and filing is an essential component of doing business in the UAE. VAT is a consumption tax that is imposed on most goods and services sold within the country. At our financial consultancy, we provide comprehensive support for businesses looking to register for VAT and comply with all regulatory requirements related to VAT filing.
+Our team of experienced professionals can assist businesses in registering for VAT, filing VAT returns, and ensuring compliance with all VAT regulations. Our services include:
+</p>
+              <p>	<strong>1.	VAT registration: </strong> We help businesses identify potential investors, including angel investors, venture capitalists, and private equity firms.
+              <p><strong>	2.	VAT compliance support:  </strong> We assist businesses in preparing investment pitches, including pitch decks, business plans, and financial projections.</p>
+              <p><strong>3.	VAT return preparation and filing: </strong>We provide due diligence support to investors and businesses, ensuring that all relevant information is available and accurate.</p>
+              <p><strong>4.	VAT advisory services: </strong>We assist businesses in negotiating terms and structuring deals with investors, including equity stakes, valuation, and exit strategies
+                </p>
+              <p>At our financial consultancy, we understand the importance of VAT registration and filing for businesses operating in the UAE. Our team of experts can provide comprehensive support and guidance throughout the VAT registration and filing process, helping businesses comply with all regulatory requirements and minimize the risk of penalties or fines.</p>
+              </p>
+              <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+                <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+                <h1 style="background: rgb(2,0,36);
+              background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Vat_Assessment">VAT Assessment & Advisory Services </h1>
+              <img src="images/aydit.jpeg">
+              <p>
+                Fund raising is a critical component of business growth and expansion, and at our financial consultancy, we provide comprehensive fund raising advisory services to businesses in the UAE. Our team of experienced professionals can assist businesses with all aspects of fund raising, from identifying potential investors and preparing investment pitches to negotiating terms and closing deals.</p>
+              <p>	<strong>1.	Investor identification:</strong> We help businesses identify potential investors, including angel investors, venture capitalists, and private equity firms.
+              <p><strong>	2.	Investment pitch preparation:  </strong> We assist businesses in preparing investment pitches, including pitch decks, business plans, and financial projections.</p>
+              <p><strong>3.	Due diligence support:  </strong>We provide due diligence support to investors and businesses, ensuring that all relevant information is available and accurate.</p>
+              <p><strong>4.	Negotiation and deal structuring: </strong>We assist businesses in negotiating terms and structuring deals with investors, including equity stakes, valuation, and exit strategies
+                </p>
+              <p><strong>5.	Post-funding support: </strong> We provide ongoing support to businesses after funding has been secured, including financial management and reporting services.</p>
+             <p>AAt our financial consultancy, we understand the challenges faced by businesses when it comes to fund raising. Our team of experts can provide comprehensive support and guidance throughout the fund raising process, helping businesses navigate the complexities of securing funding and maximizing their chances of success</p>
+              </p>
+              <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+                <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+                <h1 style="background: rgb(2,0,36);
+              background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Startup">Startup Consultancy Services</h1>
+              <img src="images/aydit.jpeg">
+              <p>
+               Fund raising is a critical component of business growth and expansion, and at our financial consultancy, we provide comprehensive fund raising advisory services to businesses in the UAE. Our team of experienced professionals can assist businesses with all aspects of fund raising, from identifying potential investors and preparing investment pitches to negotiating terms and closing deals.</p>
+             <p>	<strong>1.	Investor identification:</strong> We help businesses identify potential investors, including angel investors, venture capitalists, and private equity firms.
+             <p><strong>	2.	Investment pitch preparation:  </strong> We assist businesses in preparing investment pitches, including pitch decks, business plans, and financial projections.</p>
+              <p><strong>3.	Due diligence support:  </strong>We provide due diligence support to investors and businesses, ensuring that all relevant information is available and accurate.</p>
+             <p><strong>4.	Negotiation and deal structuring: </strong>We assist businesses in negotiating terms and structuring deals with investors, including equity stakes, valuation, and exit strategies
+                </p>
+            <p><strong>5.	Post-funding support: </strong> We provide ongoing support to businesses after funding has been secured, including financial management and reporting services.</p>
+              <p>AAt our financial consultancy, we understand the challenges faced by businesses when it comes to fund raising. Our team of experts can provide comprehensive support and guidance throughout the fund raising process, helping businesses navigate the complexities of securing funding and maximizing their chances of success</p>
+              </p>
+            <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+              <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>
+                <h1 style="background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Bank">Bank Account Opening Services </h1>
+              <img src="images/aydit.jpeg">
+            <p>
+                Opening a bank account is an essential component of establishing and managing a successful business. At our financial consultancy, we provide comprehensive support for businesses looking to open a bank account, including guidance on choosing the right bank, selecting the appropriate account type, and complying with all regulatory requirements.
+               Our team of experienced professionals can assist businesses in opening bank accounts in various jurisdictions, including the UAE, the UK, and other countries.
+                              <p>	<strong>1.	Bank selection:</strong> We can help businesses select the right bank based on their specific needs, taking into account factors such as the bank's reputation, fees, services offered, and geographical reach.
+             <p><strong>	2.	Account type selection:  </strong> We can guide businesses in selecting the right account type based on their specific requirements, such as current accounts, savings accounts, or offshore accounts.</p>
+              <p><strong>3.	Documentation preparation:   </strong>We assist businesses in preparing all the necessary documentation required for bank account opening, including proof of identity, address, and business registration.</p>
+              <p><strong>4.	Compliance support:  </strong>We provide guidance and support for businesses in complying with all regulatory requirements, such as anti-money laundering (AML) and know-your-customer (KYC) regulations.
+              </p>
+              <p><strong>5.	Ongoing account management:  </strong> We offer ongoing support to help businesses manage their bank accounts, including transaction processing, statement reconciliation, and account reporting.</p>
+            <p>AAt our financial consultancy, we understand the challenges faced by businesses when it comes to fund raising. Our team of experts can provide comprehensive support and guidance throughout the fund raising process, helping businesses navigate the complexities of securing funding and maximizing their chances of success</p>
+              </p>
+           <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+              <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>     
+              <h1 style="background: rgb(2,0,36);
+              background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Transfer">Transfer Pricing Services </h1>
+                <img src="images/aydit.jpeg">
+              <p>
+                Transfer pricing is a critical component of international taxation that refers to the pricing of goods, services, and intangible assets transferred between entities of a multinational corporation located in different countries. The goal of transfer pricing is to ensure that transactions between related parties are priced at arm's length - meaning that they reflect the true market value of the transaction as if it were conducted between unrelated parties. This is essential to prevent multinational corporations from artificially reducing their taxable income by shifting profits to low-tax jurisdictions.
+
+                Transfer pricing can be a complex and challenging area for businesses to navigate. The rules and regulations governing transfer pricing are constantly changing, and there can be significant penalties for businesses that fail to comply with them. For this reason, many businesses choose to work with financial consultancies that specialize in transfer pricing.
+                A financial consultancy can help businesses develop and implement transfer pricing policies that are in compliance with local regulations and international standards. This involves analyzing the transactions between related parties to determine the appropriate transfer pricing methodology and pricing structure. Financial consultancies can also provide guidance on transfer pricing documentation requirements, as well as assist with any audits or disputes related to transfer pricing.
+                
+                Working with a financial consultancy can help businesses mitigate the risks associated with transfer pricing and ensure that their transfer pricing policies are in compliance with all applicable regulations. This can help businesses avoid costly penalties, as well as maintain a positive reputation with tax authorities and other stakeholders.
+                In summary, transfer pricing is an essential area of international taxation that requires careful attention from businesses. By working with a financial consultancy that specializes in transfer pricing, businesses can ensure that their transfer pricing policies are in compliance with all regulations and best practices, minimizing their risk and maximizing their financial performance.
+                </p>
+                </p>
+             <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+                <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>   
+                <h1 style="background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: white; padding: 20px; margin-bottom: 10px;" id="Virtual">Virtual CFO Services:</h1>
+                  <img src="images/aydit.jpeg">
+                <p>
+                  A Niche financial service which will add value proposition to manage your business financials by an expert pool of CFOs. Finance Virtual CFOs, or Chief Financial Officer, are professionals who offer financial management services to businesses on a remote, part-time or contractual basis. Unlike a full-time CFO, virtual CFOs work with businesses on an as-needed basis, providing financial expertise and support to help businesses manage their finances effectively.
+
+One of the main advantages of hiring a virtual CFO is that it is a cost-effective way to access high-level financial expertise. Hiring a full-time CFO can be expensive, and may not be necessary for every business. By working with a virtual CFO, businesses can access the same level of expertise, without the expense of a full-time employee.
+
+Another advantage of hiring a virtual CFO is that they can provide a wide range of financial services, including financial planning, forecasting, budgeting, and analysis. They can also help businesses identify and mitigate financial risks, and provide guidance on financial decisions, such as investments or business expansion.
+
+Virtual CFOs also bring a fresh perspective to a business. They can offer an objective viewpoint on financial matters, which can help businesses make more informed decisions. Additionally, they can help businesses stay up-to-date with the latest financial trends and regulations, ensuring that the business is operating in compliance with all relevant laws and regulations.
+
+Overall, hiring a virtual CFO can be a smart choice for businesses of all sizes. It provides access to high-level financial expertise at an affordable cost, while also providing a fresh perspective on financial matters. By working with a virtual CFO, businesses can better manage their finances, make more informed decisions, and achieve greater financial success.
+  </p>
+               <div style="display: flex; justify-content: center; background-color: ;"><button style="border-style: none; padding: 10px; margin: 10px; background-color: #5a23c8; color: #f8f4ff; border-radius: 5px; cursor: pointer;">contact Us</button>
+                  <button style="border-style: none; padding: 10px; margin: 10px; background-color: #ddd428; color: #000000; border-radius: 5px; cursor: pointer;">About Us</button></div>                                     
+           </div>
+  </div>
+  </div>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>(() => {
+      'use strict'
+      const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      tooltipTriggerList.forEach(tooltipTriggerEl => {
+        new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+    })()
+    </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+        </script>
+        <script src="sweetalert2.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/jquery/jquery-migrate.min.js"></script>
+        <script src="lib/popper/popper.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/scrollreveal/scrollreveal.min.js"></script>
+        <script src="js/new1/scrollreveal.min.js"></script>
+        <!-- Contact Form JavaScript File -->
+        <script src="js/new1/owl-carousel.js"></script>
+        <!-- Template Main Javascript File -->
+        <script src="js/main.js"></script> 
+        <script src="js/new1/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery-2.2.0.min.js"></script>
+        <!-- JS | all script for all pages -->
+        <script src="js/vs-all-js.js"></script>
+        <script>
+            AOS.init();
+        </script></body>
+</html>
